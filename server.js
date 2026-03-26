@@ -11,6 +11,9 @@ initLogger();
 const app = express();
 const PORT = 3000;
 
+app.use(cors({
+  origin: "https://result-watcher.netlify.app/"
+}));
 
 app.use(express.static("public"));
 
